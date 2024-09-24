@@ -1,31 +1,7 @@
-:root{
-  --primary-color: #6a0dad;
-  --secondary-color: #04032b;
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-a{
-  text-decoration: none;
-}
-
-a:hover{
-  text-decoration: underline;
-}
-
-
-input{
-  color: var(--primary-color);
-}
-
 .container{
   height:100vh;
   width:100vw;
-background: url('movie-background-min.jpg'), linear-gradient(to left, var(--secondary-color), var(--primary-color));
+background: url('../../assets/movie-background-min.jpg'), linear-gradient(to left, var(--secondary-color), var(--primary-color));
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -61,7 +37,7 @@ background: url('movie-background-min.jpg'), linear-gradient(to left, var(--seco
   width: 100%;
   outline: none;
   font-size: 16px;
-  'border-radius:50px;
+  color: var(--primary-color);
 }
 
 .login-field::placeholder{
