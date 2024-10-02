@@ -1,4 +1,4 @@
-.message-container {
+.modal-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -11,8 +11,8 @@
     align-items: center;
 }
 
-.message-card {
-    background-color: whitesmoke;
+.modal{
+    background-color: var(--secondary-color);
     border-radius: 6px;
     width: 340px;
     box-shadow: 0px 4px 20px 6px rgba(0, 0, 0, 0.3);
@@ -21,28 +21,29 @@
     justify-content: space-between;
 }
 
-.message-card-head {
+.modal-head {
     border-bottom: 1px solid grey;
     text-transform: capitalize;
     padding: 14px 8px;
 }
-.message-card-body {
+.modal-body {
     border-bottom: 1px solid grey;
     padding: 30px 10px;
 }
 
-.message-card-footer {
+.modal-footer {
     margin: 14px 8px;
     display: flex;
     justify-content: flex-end;
 }
 
-.message-card-footer button {
+.modal-footer button {
     font-size: bolder;
-    background-color: #6a0dad;
+    background-color: var(--primary-color);
     color: whitesmoke;
     border: none;
     outline: none;
     border-radius: 6px;
     padding: 10px 20px;
 }
+
