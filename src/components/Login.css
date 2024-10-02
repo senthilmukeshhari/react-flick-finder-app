@@ -9,7 +9,7 @@ background: url('../../assets/movie-background-min.jpg'), linear-gradient(to lef
 }
 
 .login-card{
-  background: #ede7f3;
+  background: var(--secondary-color);
   backdrop-filter: blur(6px);
   height: 450px;
   padding: 0 40px;
@@ -19,9 +19,6 @@ background: url('../../assets/movie-background-min.jpg'), linear-gradient(to lef
   align-items: center;
   border-radius: 10px;
   box-shadow: 4px 4px 20px 4px rgba(0,0,0, 0.3);
- 'border-left: 1px solid whitesmoke;
-  'border-top: 1px solid whitesmoke;
-  
 }
 
 .login-card h1{
