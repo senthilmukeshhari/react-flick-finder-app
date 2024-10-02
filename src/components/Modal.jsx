@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './Modal.css';
+import "./Modal.css";
 
 class Modal extends Component {
     render() {
@@ -9,11 +9,16 @@ class Modal extends Component {
                     <div className="message-card-head">this.props.title</div>
                     <div className="message-card-body">this.props.message</div>
                     <div className="message-card-footer">
-                        <button type="button" onChange={() => {
-                          this.props.show.setState({
-                            showMessage : false
-                          })
-                        }>Ok</button>
+                        <button
+                            type="button"
+                            onChange={() => {
+                                this.props.show.setState({
+                                    showMessage: false
+                                });
+                            }}
+                        >
+                            Ok
+                        </button>
                     </div>
                 </div>
             </div>
