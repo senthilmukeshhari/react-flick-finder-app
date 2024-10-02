@@ -5,13 +5,13 @@ import "./Login.css";
 class Login extends Component {
     constructor() {
         super();
-        this.state({
+        this.state = {
             username: "",
             password: "",
             title: "",
             message: "",
             showModal: false
-        });
+        };
     }
     render() {
         return (
