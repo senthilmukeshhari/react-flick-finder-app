@@ -15,7 +15,7 @@ class Login extends Component {
     }
     render() {
         return (
-            <>
+            <div>
                 <div className="container">
                     <main className="login-card">
                         <h1>Login</h1>
@@ -49,23 +49,35 @@ class Login extends Component {
                         <button
                             type="button"
                             className="login-btn"
-                            onChange={() => {
+                            onClick={() => {
+                                this.setState({
+                                    showModal: true
+                                });
                                 if (
-                                    this.state.username == "admin" &&
-                                    this.state.password == "admin"
+                                    this.state.username.trim() == "admin" &&
+                                    this.state.password.trim() == "admin"
                                 ) {
                                     this.setState({
-                                        showMessage: true,
                                         title: "information",
                                         message: "you are login."
                                     });
                                 } else {
-                                    this.setState({
-                                        showMessage: false,
-                                        title: "warning",
-                                        message:
-                                            "invalid username and password."
-                                    });
+                                    if (
+                                        this.state.username.trim() == "" ||
+                                        this.state.password.trim() == ""
+                                    ) {
+                                        this.setState({
+                                            title: "warning",
+                                            message:
+                                                "username and password are required."
+                                        });
+                                    } else {
+                                        this.setState({
+                                            title: "warning",
+                                            message:
+                                                "invalid username and password."
+                                        });
+                                    }
                                 }
                             }}
                         >
@@ -76,16 +88,17 @@ class Login extends Component {
                         </a>
                     </main>
                 </div>
-                {this.state.showMessage && (
+                {this.state.showModal && (
                     <Modal
                         title={this.state.title}
                         message={this.state.message}
                         show={this}
                     />
                 )}
-            </>
+            </div>
         );
     }
 }
+
 
 export default Login;
