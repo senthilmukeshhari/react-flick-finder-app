@@ -1,14 +1,19 @@
 import { Component } from "react";
+import './Modal.css';
 
 class Modal extends Component {
     render() {
         return (
             <div className="message-container">
                 <div className="message-card">
-                    <div className="message-card-head">Information</div>
-                    <div className="message-card-body">You are Login.</div>
+                    <div className="message-card-head">this.props.title</div>
+                    <div className="message-card-body">this.props.message</div>
                     <div className="message-card-footer">
-                        <button type="button">Ok</button>
+                        <button type="button" onChange={() => {
+                          this.setState({
+                            showMessage : false
+                          })
+                        }>Ok</button>
                     </div>
                 </div>
             </div>
