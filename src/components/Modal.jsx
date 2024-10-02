@@ -10,7 +10,7 @@ class Modal extends Component {
                     <div className="message-card-body">this.props.message</div>
                     <div className="message-card-footer">
                         <button type="button" onChange={() => {
-                          this.setState({
+                          this.props.show.setState({
                             showMessage : false
                           })
                         }>Ok</button>
