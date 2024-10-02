@@ -4,14 +4,14 @@ import "./Modal.css";
 class Modal extends Component {
     render() {
         return (
-            <div className="message-container">
-                <div className="message-card">
-                    <div className="message-card-head">this.props.title</div>
-                    <div className="message-card-body">this.props.message</div>
-                    <div className="message-card-footer">
+            <div className="modal-container">
+                <div className="modal">
+                    <div className="modal-head">{ this.props.title }</div>
+                    <div className="modal-body">{ this.props.message }</div>
+                    <div className="modal-footer">
                         <button
                             type="button"
-                            onChange={() => {
+                            onClick={() => {
                                 this.props.show.setState({
                                     showModal: false
                                 });
@@ -25,5 +25,6 @@ class Modal extends Component {
         );
     }
 }
+
 
 export default Modal;
