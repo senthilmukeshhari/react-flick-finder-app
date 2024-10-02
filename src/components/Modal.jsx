@@ -13,7 +13,7 @@ class Modal extends Component {
                             type="button"
                             onChange={() => {
                                 this.props.show.setState({
-                                    showMessage: false
+                                    showModal: false
                                 });
                             }}
                         >
